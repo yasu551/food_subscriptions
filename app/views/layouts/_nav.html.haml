@@ -1,0 +1,13 @@
+%nav.navbar.navbar-expand-lg.shadow.sticky-top.bg-white
+  .container-fluid
+    = link_to '食材デリバリー', root_path, class: 'navbar-brand'
+    %button.navbar-toggler{ type: :button, data: { bs: { toggle: :collapse, target: '#navbar-nav' } }, aria: { controls: 'navbar-nav', expanded: false } }
+      %span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbar-nav
+      %ul.navbar-nav
+        -# %li.nav-item
+        -#   = link_to 'プラン一覧', plans_path, class: 'nav-link'
+        %li.nav-item
+          = link_to 'アカウント編集', edit_user_registration_path, class: 'nav-link'
+        %li.nav-item
+          = button_to 'ログアウト', destroy_user_session_path, method: :delete, data: { turbo_confirm: 'ログアウトしますか？' }, class: 'nav-link'

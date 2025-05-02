@@ -52,3 +52,4 @@ ja:
         reset_password_token: reset_password_token  #g
         telephone_number: 電話番号
         remember_me: ログイン状態を保持する
+        plan: プラン
