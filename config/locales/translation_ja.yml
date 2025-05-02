@@ -53,3 +53,8 @@ ja:
         telephone_number: 電話番号
         remember_me: ログイン状態を保持する
         plan: プラン
+  enumerize:
+    user:
+      delivery_cycle:
+        weekly: 週1回
+        bi_monthly: 月2回
