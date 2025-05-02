@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    models:
+      administrator: 管理者
+
+    attributes:
+      administrator:
+        email: メールアドレス
+        password: パスワード
+        remember_me: ログイン状態を保持する
+        encrypted_password: encrypted_password  #g
+        remember_created_at: remember_created_at  #g
+        reset_password_sent_at: reset_password_sent_at  #g
+        reset_password_token: reset_password_token  #g
