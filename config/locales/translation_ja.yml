@@ -2,6 +2,7 @@ ja:
   activerecord:
     models:
       administrator: 管理者
+      plan: プラン
 
     attributes:
       administrator:
@@ -12,3 +13,7 @@ ja:
         remember_created_at: remember_created_at  #g
         reset_password_sent_at: reset_password_sent_at  #g
         reset_password_token: reset_password_token  #g
+
+      plan:
+        description: 説明
+        name: 名前

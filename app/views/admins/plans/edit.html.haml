@@ -1,0 +1,8 @@
+.row.justify-content-center.align-items-center
+  .col-md-8.col-11
+    %h1.fs-2.text-center.my-4 プラン編集
+    .mb-3
+      = simple_form_for @plan, url: admins_plan_path(@plan) do |f|
+        = f.input :name
+        = f.input :description
+        = f.button :submit, '更新', class: 'btn btn-primary'
