@@ -1,0 +1,9 @@
+= simple_form_for ingredient_set, url: admins_ingredient_sets_path do |f|
+  = f.error_notification
+  = f.input :name
+  = f.input :content
+  = f.input :price
+  = f.input :weight
+  = f.input :refrigerated
+  = f.input :allergy_info
+  = f.submit class: 'btn btn-primary'

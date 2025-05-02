@@ -3,6 +3,7 @@ ja:
     models:
       administrator: 管理者
       plan: プラン
+      ingredient_set: 食材セット
 
     attributes:
       administrator:
@@ -17,3 +18,11 @@ ja:
       plan:
         description: 説明
         name: 名前
+
+      ingredient_set:
+        allergy_info: アレルギー情報
+        content: 内容品目
+        name: セット名
+        price: 価格
+        refrigerated: 冷蔵品を含む？
+        weight: 重量(kg)
