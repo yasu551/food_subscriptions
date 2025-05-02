@@ -18,7 +18,7 @@ ja:
         reset_password_token: reset_password_token  #g
 
       plan:
-        description: 説明
+        description: 概要
         name: 名前
         ingredient_sets: 食材セット
         plan_items: plan_items  #g

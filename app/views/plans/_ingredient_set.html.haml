@@ -1,0 +1,12 @@
+.card
+  .card-body
+    %h5.card-title= ingredient_set.name
+    %hr
+    .card-text
+      = simple_format(h(ingredient_set.content))
+      %ul.list-group.list-group-flush
+        %li.list-group-item #{IngredientSet.human_attribute_name(:price)}: #{number_to_currency(ingredient_set.price)}
+        %li.list-group-item #{IngredientSet.human_attribute_name(:weight)}: #{ingredient_set.weight}
+        - if ingredient_set.refrigerated?
+          %li.list-group-item 冷蔵品
+        %li.list-group-item #{IngredientSet.human_attribute_name(:allergy_info)}: #{simple_format(h(ingredient_set.allergy_info))}
