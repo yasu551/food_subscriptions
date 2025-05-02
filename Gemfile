@@ -23,6 +23,9 @@ gem 'thruster', require: false
 # gem "image_processing", "~> 1.2"
 
 gem 'haml-rails'
+gem 'enumerize'
+gem 'simple_form'
+gem 'kaminari'
 
 group :development, :test do
   gem 'debug', platforms: %i[ mri windows ], require: 'debug/prelude'
@@ -35,4 +38,6 @@ group :development do
   gem 'sgcop', github: 'SonicGarden/sgcop', require: false
   gem 'haml_lint', require: false
   gem 'html2haml', require: false
+  gem 'i18n_generators', require: false
+  gem 'letter_opener_web'
 end
