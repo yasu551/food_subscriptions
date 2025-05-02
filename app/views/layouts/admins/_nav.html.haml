@@ -8,4 +8,6 @@
         %li.nav-item
           = link_to 'プラン一覧', admins_plans_path, class: 'nav-link'
         %li.nav-item
+          = link_to '食材セット一覧', admins_ingredient_sets_path, class: 'nav-link'
+        %li.nav-item
           = button_to 'ログアウト', destroy_administrator_session_path, method: :delete, data: { turbo_confirm: 'ログアウトしますか？' }, class: 'nav-link'
