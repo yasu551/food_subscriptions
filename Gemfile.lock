@@ -1,3 +1,17 @@
+GIT
+  remote: https://github.com/SonicGarden/sgcop.git
+  revision: bb85ad460e5bd359a23ecb6e66fbf6240f449be9
+  specs:
+    sgcop (1.2.6)
+      rubocop (~> 1.75.1)
+      rubocop-capybara (~> 2.22.0)
+      rubocop-factory_bot (~> 2.27.0)
+      rubocop-performance (~> 1.25.0)
+      rubocop-rails (~> 2.31.0)
+      rubocop-rake (~> 0.7.1)
+      rubocop-rspec (~> 3.5.0)
+      rubocop-rspec_rails (~> 2.31.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -248,6 +262,12 @@ GEM
     rubocop-ast (1.44.1)
       parser (>= 3.3.7.2)
       prism (~> 1.4)
+    rubocop-capybara (2.22.1)
+      lint_roller (~> 1.1)
+      rubocop (~> 1.72, >= 1.72.1)
+    rubocop-factory_bot (2.27.1)
+      lint_roller (~> 1.1)
+      rubocop (~> 1.72, >= 1.72.1)
     rubocop-performance (1.25.0)
       lint_roller (~> 1.1)
       rubocop (>= 1.75.0, < 2.0)
@@ -262,6 +282,16 @@ GEM
       rubocop (>= 1.72)
       rubocop-performance (>= 1.24)
       rubocop-rails (>= 2.30)
+    rubocop-rake (0.7.1)
+      lint_roller (~> 1.1)
+      rubocop (>= 1.72.1)
+    rubocop-rspec (3.5.0)
+      lint_roller (~> 1.1)
+      rubocop (~> 1.72, >= 1.72.1)
+    rubocop-rspec_rails (2.31.0)
+      lint_roller (~> 1.1)
+      rubocop (~> 1.72, >= 1.72.1)
+      rubocop-rspec (~> 3.5)
     ruby-progressbar (1.13.0)
     securerandom (0.4.1)
     solid_cable (3.0.7)
@@ -344,17 +374,17 @@ DEPENDENCIES
   jsbundling-rails
   kamal
   propshaft
-  puma (>= 5.0)
+  puma
   rails (~> 8.0.2)
   rubocop-rails-omakase
+  sgcop!
   solid_cable
   solid_cache
   solid_queue
-  sqlite3 (>= 2.1)
+  sqlite3
   stimulus-rails
   thruster
   turbo-rails
-  tzinfo-data
   web-console
 
 BUNDLED WITH
