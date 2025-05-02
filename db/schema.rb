@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_02_052211) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_02_055450) do
   create_table "administrators", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -35,6 +35,15 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_02_052211) do
     t.index ["name"], name: "index_ingredient_sets_on_name", unique: true
   end
 
+  create_table "plan_items", force: :cascade do |t|
+    t.integer "plan_id", null: false
+    t.integer "ingredient_set_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ingredient_set_id"], name: "index_plan_items_on_ingredient_set_id"
+    t.index ["plan_id"], name: "index_plan_items_on_plan_id"
+  end
+
   create_table "plans", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", default: "", null: false
@@ -42,4 +51,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_02_052211) do
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_plans_on_name", unique: true
   end
+
+  add_foreign_key "plan_items", "ingredient_sets"
+  add_foreign_key "plan_items", "plans"
 end

@@ -1,5 +1,6 @@
 class Admins::PlansController < Admins::ApplicationController
   before_action :set_plan, only: %i[edit update]
+  before_action :set_ingredient_sets, only: %i[edit update]
 
   def index
     @plans = Plan.default_order
@@ -22,7 +23,11 @@ class Admins::PlansController < Admins::ApplicationController
     @plan = Plan.find(params[:id])
   end
 
+  def set_ingredient_sets
+    @ingredient_sets = IngredientSet.default_order
+  end
+
   def plan_params
-    params.expect(plan: %i[name description])
+    params.expect(plan: [ :name, :description, ingredient_set_ids: [] ])
   end
 end

@@ -5,4 +5,5 @@
       = simple_form_for @plan, url: admins_plan_path(@plan) do |f|
         = f.input :name
         = f.input :description
+        = f.association :ingredient_sets, collection: @ingredient_sets
         = f.button :submit, '更新', class: 'btn btn-primary'

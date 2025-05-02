@@ -18,6 +18,7 @@ ja:
       plan:
         description: 説明
         name: 名前
+        ingredient_sets: 食材セット
 
       ingredient_set:
         allergy_info: アレルギー情報
