@@ -5,4 +5,6 @@ class Delivery < ApplicationRecord
 
   enumerize :status, in: %w[preparing delivered stopped]
   enumerize :time_slot, in: %i[am pm]
+
+  scope :default_order, -> { order(id: :desc) }
 end
