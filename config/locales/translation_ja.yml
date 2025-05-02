@@ -58,3 +58,11 @@ ja:
       delivery_cycle:
         weekly: 週1回
         bi_monthly: 月2回
+    delivery:
+      status:
+        pending: 準備中
+        delivered: 配送済み
+        stopped: 配送停止
+      time_slot:
+        am: 午前
+        pm: 午後

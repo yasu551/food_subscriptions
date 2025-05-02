@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_02_060316) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_02_073820) do
   create_table "administrators", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -21,6 +21,16 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_02_060316) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_administrators_on_email", unique: true
     t.index ["reset_password_token"], name: "index_administrators_on_reset_password_token", unique: true
+  end
+
+  create_table "deliveries", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.date "scheduled_on", null: false
+    t.string "status", default: "preparing", null: false
+    t.string "time_slot", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_deliveries_on_user_id"
   end
 
   create_table "ingredient_sets", force: :cascade do |t|
@@ -74,6 +84,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_02_060316) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "deliveries", "users"
   add_foreign_key "plan_items", "ingredient_sets"
   add_foreign_key "plan_items", "plans"
   add_foreign_key "users", "plans"

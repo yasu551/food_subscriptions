@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, authentication_keys: %i[login_key]
 
   belongs_to :plan, optional: true
+  has_many :deliveries, dependent: :restrict_with_exception
 
   enumerize :delivery_cycle, in: %w[weekly bi_monthly]
 
