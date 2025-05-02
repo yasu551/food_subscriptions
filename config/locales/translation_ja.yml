@@ -60,7 +60,7 @@ ja:
         bi_monthly: 月2回
     delivery:
       status:
-        pending: 準備中
+        preparing: 準備中
         delivered: 配送済み
         stopped: 配送停止
       time_slot:

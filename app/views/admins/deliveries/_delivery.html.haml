@@ -1,0 +1,7 @@
+.card
+  .card-body
+    %p ユーザー名: #{delivery.user.name}
+    %p 住所: #{delivery.user.address}
+    %p 配達日: #{l(delivery.scheduled_on)}
+    %p プラン: #{delivery.user.plan.name}
+    %p ステータス: #{delivery.status.text}
