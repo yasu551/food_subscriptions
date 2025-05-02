@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_02_055450) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_02_060316) do
   create_table "administrators", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -52,6 +52,29 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_02_055450) do
     t.index ["name"], name: "index_plans_on_name", unique: true
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email"
+    t.string "login_key", null: false
+    t.string "address"
+    t.string "telephone_number"
+    t.text "allergy_note"
+    t.boolean "active", default: true, null: false
+    t.string "delivery_cycle"
+    t.integer "plan_id"
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["login_key"], name: "index_users_on_login_key", unique: true
+    t.index ["plan_id"], name: "index_users_on_plan_id"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
   add_foreign_key "plan_items", "ingredient_sets"
   add_foreign_key "plan_items", "plans"
+  add_foreign_key "users", "plans"
 end

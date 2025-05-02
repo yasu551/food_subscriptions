@@ -4,6 +4,8 @@ ja:
       administrator: 管理者
       plan: プラン
       ingredient_set: 食材セット
+      plan_item: plan_item  #g
+      user: ユーザー
 
     attributes:
       administrator:
@@ -19,6 +21,7 @@ ja:
         description: 説明
         name: 名前
         ingredient_sets: 食材セット
+        plan_items: plan_items  #g
 
       ingredient_set:
         allergy_info: アレルギー情報
@@ -27,3 +30,24 @@ ja:
         price: 価格
         refrigerated: 冷蔵品を含む？
         weight: 重量(kg)
+
+      plan_item:
+        ingredient_set: :activerecord.models.ingredient_set  #g
+        plan: :activerecord.models.plan  #g
+
+      user:
+        active: active  #g
+        address: 住所
+        allergy_note: アレルギー備考
+        delivery_cycle: 配達サイクル
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード（確認）
+        current_password: 現在のパスワード
+        encrypted_password: encrypted_password  #g
+        login_key: ログインID
+        name: 名前
+        remember_created_at: remember_created_at  #g
+        reset_password_sent_at: reset_password_sent_at  #g
+        reset_password_token: reset_password_token  #g
+        telephone_number: 電話番号

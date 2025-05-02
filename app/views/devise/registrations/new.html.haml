@@ -1,0 +1,12 @@
+.vh-100.row.justify-content-center.align-items-center
+  .col-md-6.col-11
+    %h1.text-center.mb-5 ユーザー作成
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = f.error_notification
+      = f.input :login_key, autofocus: true, required: false
+      = f.input :name, required: false
+      = f.input :password, required: false,
+        hint: ("#{@minimum_password_length}文字以上" if @minimum_password_length),
+        input_html: { autocomplete: "new-password" }
+      = f.input :password_confirmation, required: false, input_html: { autocomplete: "new-password" }
+      = f.button :submit, '作成', class: 'btn btn-primary d-block w-100'

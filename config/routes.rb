@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users, only: %i[sessions registrations]
+
   devise_for :administrators, only: %i[sessions], controllers: { sessions: 'admins/sessions' }
   namespace :admins do
     root to: 'plans#index'
